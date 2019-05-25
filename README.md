@@ -1,12 +1,10 @@
 # VendorDetailPerformer
 
-In this exercise, you will create a UiPath automation that performs the steps below.
-To achieve this, you will use the REFrameWork as the starting template and follow the UiPath development best practices.
+UiPath Automation Using REFrameWork Exercise
 
 Here are the steps performed by the Robot:
 1. Log in to https://www.acme-test.com.
 2. On the landing page, Dashboard, click or hover over the Vendors menu item and then click on Search for Vendor. Click on Display All Vendors. Scrape the data from the whole table displayed. The resulting datatable will be used as the input data for the process. Navigate back to the dashboard.
-Note: Navigation can be achieved in multiple ways by the robot - choose whichever you find best.
 3. For each Tax ID:
 - Navigate to Vendors - Search page (click or hover over the Vendors menu item and then click on Search for Vendor);
 - Type the Tax ID into the Vendor Tax ID field;
@@ -16,7 +14,7 @@ Note: Navigation can be achieved in multiple ways by the robot - choose whicheve
 - If the City does NOT belong to the group {""Koln"", ""Lyon"", ""Torino"", ""Rimini"", ""Brasov""}, this should be categorized as the second Business Rule Exception. We can only process requests from these cities. Check the City value extracted after the individual Tax ID search;
 - If no Business Rule Exception, Append the resulting datatable from each page into an Excel worksheet; you shouldn't worry about the headers and format of the output file.
 
-Constraints to follow in the development, using the REFrameWork:
+Limitations:
 1. TransactionItem datatype should be a DataRow. The process should recover and retry 2 times in case of errors in navigation between the Vendor Search and Vendor Search Results pages. One transaction is the action of navigating to the Vendor Search page, searching for the TaxID and scraping the values from the resulting one row table. (Similar to ACME Process 5 from the UiPath Academy). 
 2. Create a separate workflow file for the Login to ACME. File input arguments: URL ; Username ; Password .
 3. Create a separate workflow file for closing ACME. 
